@@ -6,14 +6,16 @@ public class Estoque{
     public static void main(String[] args) {
         int entrada,saida;
         try (Scanner sc = new Scanner(System.in)) {
-            Product x = new Product();
+
             System.out.println("Digite o nome do produto: ");
-            x.nome = sc.next();
+            String nome = sc.next();
             System.out.println("Digite o preço do produto: ");
-            x.preco = sc.nextDouble();
+            double preco = sc.nextDouble();
             System.out.println("Digite a quantidade: ");
-            x.quantidade = sc.nextInt();
+            int quantidade = sc.nextInt();
             
+            Product x = new Product(nome, preco, quantidade);
+
             x.valorTotal();
             
             x.MostrarDados();
